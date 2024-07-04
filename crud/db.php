@@ -4,10 +4,11 @@ $username = "root";
 $password = "";
 $dbname = "tit_crud";
 
-// Create connection & check connection
+// Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Connection successful
-echo "Connection Success to database: " . $dbname;
-
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>

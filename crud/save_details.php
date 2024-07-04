@@ -29,7 +29,7 @@ VALUES ('$student_name', '$phone', '$gender', '$image', '$course')";
 
 if ($conn->query($sql) == TRUE) {
     echo "<script>alert('Added  Successfully!');</script>";
-    echo "<script type='text/javascript'>window.location.href = 'index.php';</script>";
+    echo "<script type='text/javascript'>window.location.href = 'view_details.php';</script>";
 } 
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
